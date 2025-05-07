@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <style>
+      :root {
+        --book-primary: #8B4513; /* SaddleBrown */
+        --book-secondary: #F5DEB3; /* Wheat */
+        --book-accent: #A0522D; /* Sienna */
+        --book-light: #FFF8DC; /* Cornsilk */
+      }
+      
+      body {
+        background-color: var(--book-light);
+        font-family: 'Georgia', serif;
+        color: #333;
+      }
+      
+      .navbar {
+        background-color: var(--book-primary) !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      
+      .navbar-brand, .nav-link {
+        color: var(--book-secondary) !important;
+      }
+      
+      .navbar-brand {
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+      
+      .nav-link:hover {
+        color: white !important;
+        text-decoration: underline;
+      }
+      
+      .dropdown-menu {
+        background-color: var(--book-secondary);
+        border: 1px solid var(--book-accent);
+      }
+      
+      .dropdown-item:hover {
+        background-color: var(--book-accent);
+        color: white;
+      }
+      
+      .btn-outline-success {
+        color: var(--book-secondary);
+        border-color: var(--book-secondary);
+      }
+      
+      .btn-outline-success:hover {
+        background-color: var(--book-accent);
+        border-color: var(--book-accent);
+      }
+      
+      .book-hero {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 5rem 0;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+      
+      .book-card {
+        background-color: white;
+        border: 1px solid var(--book-accent);
+        border-radius: 5px;
+        transition: transform 0.3s;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      
+      .book-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      }
+      
+      .book-card img {
+        border-bottom: 1px solid var(--book-accent);
+      }
+      
+      .book-card-body {
+        padding: 1.25rem;
+      }
+      
+      .book-title {
+        color: var(--book-primary);
+        font-weight: bold;
+      }
+      
+      footer {
+        background-color: var(--book-primary);
+        color: var(--book-secondary);
+        padding: 2rem 0;
+        margin-top: 3rem;
+      }
+    </style>
+
+    <title>My Book Haven</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i class="fas fa-book-open me-2"></i>Book Haven
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-home me-1"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-info-circle me-1"></i> About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-bookmark me-1"></i> Categories
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Fiction</a></li>
+                <li><a class="dropdown-item" href="#">Non-Fiction</a></li>
+                <li><a class="dropdown-item" href="#">Science Fiction</a></li>
+                <li><a class="dropdown-item" href="#">Fantasy</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">All Genres</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-star me-1"></i> Top Picks</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-question-circle me-1"></i> Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search books..." aria-label="Search">
+            <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Optional Book Hero Section -->
+    <section class="book-hero">
+      <div class="container">
+        <h1 class="display-4">Discover Your Next Favorite Book</h1>
+        <p class="lead">Explore our curated collection of timeless classics and modern masterpieces</p>
+        <a href="#" class="btn btn-primary btn-lg mt-3">Browse Collection</a>
+      </div>
+    </section>
+
+    <main class="container my-5">
+      {% block content %}
+      <!-- Sample content for visualization -->
+      <div class="row">
+        <div class="col-md-4">
+          <div class="book-card">
+            <img src="https://m.media-amazon.com/images/I/51EQXG5R6VL._SY425_.jpg" class="card-img-top" alt="Book Cover">
+            <div class="book-card-body">
+              <h5 class="book-title">The Great Gatsby</h5>
+              <p class="text-muted">F. Scott Fitzgerald</p>
+              <p>A portrait of the Jazz Age in all of its decadence and excess.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-primary">Add to List</button>
+                </div>
+                <small class="text-muted">★★★★☆</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="book-card">
+            <img src="https://m.media-amazon.com/images/I/51M7M+AZO2L._SY425_.jpg" class="card-img-top" alt="Book Cover">
+            <div class="book-card-body">
+              <h5 class="book-title">To Kill a Mockingbird</h5>
+              <p class="text-muted">Harper Lee</p>
+              <p>A gripping, heart-wrenching, and wholly remarkable tale of coming-of-age.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-primary">Add to List</button>
+                </div>
+                <small class="text-muted">★★★★★</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="book-card">
+            <img src="https://m.media-amazon.com/images/I/51Dfqo6jR5L._SY425_.jpg" class="card-img-top" alt="Book Cover">
+            <div class="book-card-body">
+              <h5 class="book-title">1984</h5>
+              <p class="text-muted">George Orwell</p>
+              <p>A dystopian social science fiction novel and cautionary tale.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-primary">Add to List</button>
+                </div>
+                <small class="text-muted">★★★★☆</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endblock content %}
+    </main>
+
+    <footer class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Book Haven</h5>
+            <p>Your portal to literary adventures since 2023.</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-light">Home</a></li>
+              <li><a href="#" class="text-light">About Us</a></li>
+              <li><a href="#" class="text-light">Book Collections</a></li>
+              <li><a href="#" class="text-light">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Connect With Us</h5>
+            <a href="#" class="text-light me-2"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-light me-2"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-light me-2"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-light"><i class="fab fa-goodreads"></i></a>
+          </div>
+        </div>
+        <hr class="my-4 bg-light">
+        <p>&copy; 2023 Book Haven. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
